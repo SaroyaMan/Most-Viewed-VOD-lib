@@ -40,13 +40,19 @@ module.exports = class MostViewedDao {
      * @return array
      */
     static getMostViewedByLimit(min, max) {
-        let mostViewedMovies = [];
-        for(let movie of mostViewedJson) {
-            if(+movie.views >= min && +movie.views <= max) {
-                mostViewedMovies.push(movie);
+        let mostViewedMovies = [], isError;
+        if (isNaN(min)) min = 0;
+        if (isNaN(max)) max = Number.MAX_SAFE_INTEGER;
+        if (min === 0 && max === Number.MAX_SAFE_INTEGER) isError = true;
+        if(!isError) {
+            for(let movie of mostViewedJson) {
+                if(+movie.views >= min && +movie.views <= max) {
+                    mostViewedMovies.push(movie);
+                }
             }
+            if(mostViewedMovies.length > 0) return mostViewedMovies;
         }
-        if(mostViewedMovies.length > 0) return mostViewedMovies;
+        //else: Error...
         jsonError['description'] = limitExceptionDesc;
         return jsonError;
     }
