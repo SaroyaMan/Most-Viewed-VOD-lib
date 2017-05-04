@@ -41,6 +41,7 @@ This is a web-service that manages most viewed movies as a part of V.O.D library
 	"views": 26,
 	"description": "An undercover FBI agent becomes a vigilante assassin and sets out to unleash his wrath upon the corrupt businessman who slaughtered his entire family at a reunion."
   }]
+  ```
 * #### Get favorite movie/tv-show by id from the V.O.D library
   **Relative Path:** /getMostViewed  
   **Verb:** POST  
@@ -55,6 +56,7 @@ This is a web-service that manages most viewed movies as a part of V.O.D library
 	"views": 120,
 	"description": "The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker."
   }
+  ```
 * #### Get a favorite movie by id
   **Relative Path:** /getMostViewedByLimit  
   **Verb:** GET  
@@ -81,6 +83,7 @@ This is a web-service that manages most viewed movies as a part of V.O.D library
 	"views": 26,
 	"description": "An undercover FBI agent becomes a vigilante assassin and sets out to unleash his wrath upon the corrupt businessman who slaughtered his entire family at a reunion."
   }]
+  ```
 ### Authors and Contributors
 For any questions and notes - you can always contact with Yoav Saroya (@SaroyaMan) - stankovic100@gmail.com
 * **category:** WS util library.
