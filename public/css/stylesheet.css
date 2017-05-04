@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background: rgba(0,0,0,0.81);
+    background-size: cover;
+    color: white;
+}
+
+h1 {
+    color: white;
+    font-size: 1000%;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    /*width: 50%;*/
+    /*height: 600px;*/
+    /*margin: 0 auto;*/
+    /*position: absolute;*/
+    top: 50%;
+    left: 50%;
+}
+
+
+nav, aside, section, article, header, footer, main {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    margin: 20px;
+}
+img {
+    margin: auto;
+}
+
+/* ------------------------------------------
+	Purpose: Main CSS File - Most Viewed V.O.D library WS
+	Version: 0.1
+	Author: Yoav Saroya
+	Date: 5/4/2017
+	-----------------------------------------*/
