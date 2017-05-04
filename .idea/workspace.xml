@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cde96e0f-ff63-4864-8739-7ea2c94b0d8e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-    </list>
+    <list default="true" id="cde96e0f-ff63-4864-8739-7ea2c94b0d8e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +15,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="475">
+              <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -56,9 +53,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -245,12 +239,12 @@
       <updated>1493823637220</updated>
       <workItem from="1493823638369" duration="5752000" />
       <workItem from="1493903876228" duration="8479000" />
-      <workItem from="1493912605356" duration="2312000" />
+      <workItem from="1493912605356" duration="3224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16543000" />
+    <option name="totallyTimeSpent" value="17455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
@@ -383,8 +377,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="475">
+          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="30" />
           <folding />
         </state>
       </provider>
