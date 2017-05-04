@@ -1,4 +1,11 @@
-const mostViewedJson = require('./data/most_viewed.json');
+const mostViewedJson = require('./data/most_viewed.json'),
+
+      //Json error in case of bad use
+      jsonError = {
+        "error": "Video(s) is not found"
+      },
+      idNotExistsDesc    = "ID is not exists",
+      limitExceptionDesc = "No results for videos with this limit of views";
 
 //MostViewedMoviesDao is a static class that handles all the data.
 module.exports = class MostViewedDao {
@@ -22,6 +29,8 @@ module.exports = class MostViewedDao {
                 return movie;
             }
         }
+        jsonError['description'] = idNotExistsDesc;
+        return jsonError;
     }
 
     /**
@@ -37,6 +46,8 @@ module.exports = class MostViewedDao {
                 mostViewedMovies.push(movie);
             }
         }
-        return mostViewedMovies;
+        if(mostViewedMovies.length > 0) return mostViewedMovies;
+        jsonError['description'] = limitExceptionDesc;
+        return jsonError;
     }
 };

@@ -1,10 +1,11 @@
-const express     = require('express'),
-      app         = express(),
-      bodyParser  = require('body-parser'),
-      port        = process.env.PORT || 3000,
-    MostViewedDao = require('./most_viewed/MostViewedDao');
+const express         = require('express'),
+      bodyParser      = require('body-parser'),
+      MostViewedDao   = require('./most_viewed/MostViewedDao'),
+      app             = express(),
+      port            = process.env.PORT || 3000;
 
-app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(bodyParser.urlencoded({extended: true}));   //For POST requests
 app.use('/assets', express.static(`${__dirname}/public`));
 
 app.get('/getAllMostViewed', (req, res) => {
@@ -14,7 +15,8 @@ app.get('/getAllMostViewed', (req, res) => {
 
 app.post('/getMostViewed', (req, res) => {
     console.log('POST request: /getMostViewed');
-    res.json(MostViewedDao.getMostViewed(+req.body.id));
+    let id = +req.body.id;
+    res.json(MostViewedDao.getMostViewed(id));
 });
 
 app.get('/getMostViewedByLimit', (req, res) => {

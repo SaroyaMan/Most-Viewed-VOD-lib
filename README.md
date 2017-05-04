@@ -45,7 +45,7 @@ This is a web-service that manages most viewed movies as a part of V.O.D library
 * #### Get favorite movie/tv-show by id from the V.O.D library
   **Relative Path:** /getMostViewed  
   **Verb:** POST  
-  **API call:** ws-favorite-movies.herokuapp.com/getMostViewed/?id={id}  
+  **API call:** ws-favorite-movies.herokuapp.com/getMostViewed
   **Parameters:** id - identifier for a specific most viewed video  
   **Example:** https://ws-favorite-movies.herokuapp.com/getMostViewed/?id=2  
   **API respond:**  
