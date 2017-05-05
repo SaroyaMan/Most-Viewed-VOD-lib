@@ -2,8 +2,8 @@
 
 ### This project is a web service with a module that handles most viewed movies from V.O.D library.
 - [Github](https://github.com/SaroyaMan/Most-Viewed-VOD-lib)  
-- [API](https://saroyaman.github.io/Most-Viewed-VOD-lib/)  
-- [Heroku](https://ws-favorite-movies.herokuapp.com/)  
+- [API](https://saroyaman.github.io/WS-Most-Viewed-VOD-lib/)  
+- [WS hosted by Heroku](https://ws-favorite-movies.herokuapp.com/)  
 
 ### Description
 This is a web-service that manages most viewed movies as a part of V.O.D library

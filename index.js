@@ -7,6 +7,11 @@ const express         = require('express'),
 
 app.use(bodyParser.urlencoded({extended: true}));   //For POST requests
 app.use('/assets', express.static(`${__dirname}/public`));
+app.use(express.static(__dirname + '/public'));
+
+app.all('/', (req, res) => {
+   res.sendFile(`assets/`);
+});
 
 app.get('/getAllMostViewed', (req, res) => {
     console.log('GET request: /getAllMostViewed');
@@ -15,8 +20,7 @@ app.get('/getAllMostViewed', (req, res) => {
 
 app.post('/getMostViewed', (req, res) => {
     console.log('POST request: /getMostViewed');
-    let id = +req.body.id;
-    res.json(MostViewedDao.getMostViewed(id));
+    res.json(MostViewedDao.getMostViewed(+req.body.id));
 });
 
 app.get('/getMostViewedByLimit', (req, res) => {
