@@ -47,7 +47,7 @@ This is a web-service that manages most viewed movies as a part of V.O.D library
   **Verb:** POST  
   **API call:** ws-favorite-movies.herokuapp.com/getMostViewed  
   **Parameters:** id - identifier for a specific most viewed video  
-  **Example:** https://ws-favorite-movies.herokuapp.com/getMostViewed/?id=2  
+  **Example:** https://ws-favorite-movies.herokuapp.com/getMostViewed	{Body: id = 2} 
   **API respond:**  
   ```json  
   {
