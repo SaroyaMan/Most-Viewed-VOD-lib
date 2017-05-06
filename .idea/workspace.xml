@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cde96e0f-ff63-4864-8739-7ea2c94b0d8e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/most_viewed/MostWatchedDao.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/most_viewed/data/most_watched.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/error.html" afterPath="$PROJECT_DIR$/public/error.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +17,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+            <state relative-caret-position="750">
+              <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -317,15 +311,15 @@
       <workItem from="1493976979337" duration="3249000" />
       <workItem from="1493996431166" duration="4016000" />
       <workItem from="1494000471253" duration="35000" />
-      <workItem from="1494095034551" duration="2116000" />
+      <workItem from="1494095034551" duration="2550000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31923000" />
+    <option name="totallyTimeSpent" value="32357000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2803437" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -512,8 +506,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        <state relative-caret-position="750">
+          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="34" />
           <folding />
         </state>
       </provider>

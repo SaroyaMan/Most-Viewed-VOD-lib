@@ -1,18 +1,18 @@
 # WS of most watched movies/tv-shows from V.O.D library
 
 ### This project is a web service with a module that handles most watched movies from V.O.D library.
-- [Github](https://github.com/SaroyaMan/Most-Viewed-VOD-lib)  
-- [API](https://saroyaman.github.io/WS-Most-Viewed-VOD-lib/)  
-- [WS hosted by Heroku](https://ws-favorite-movies.herokuapp.com/)  
+- [Github](https://github.com/SaroyaMan/WS-Most-Watched-VOD-lib)  
+- [API](https://saroyaman.github.io/WS-Most-Watched-VOD-lib)  
+- [WS hosted by Heroku](https://ws-most-watched-movies.herokuapp.com/)  
 
 ### Description
 This is a web-service that manages most watched movies as a part of V.O.D library
 
 ### API
 * #### Get all most watched movies/tv-shows from the V.O.D library
-  **Relative Path:** /getAllMostViewed  
+  **Relative Path:** /getAllMostWatched  
   **Verb:** GET  
-  **API call:** ws-favorite-movies.herokuapp.com/getAllMostWatched 
+  **API call:** ws-most-watched-movies.herokuapp.com/getAllMostWatched 
   **API respond:**  
   ```json  
   [{
@@ -43,11 +43,11 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
   }]
   ```
 * #### Get most watched movie/tv-show by id from the V.O.D library
-  **Relative Path:** /getMostViewed  
+  **Relative Path:** /getMostWatched  
   **Verb:** POST  
-  **API call:** ws-favorite-movies.herokuapp.com/getMostWatched    
+  **API call:** ws-most-watched-movies.herokuapp.com/getMostWatched    
   **Parameters:** id - identifier for a specific most viewed video  
-  **Example:** https://ws-favorite-movies.herokuapp.com/Watched 	{Body: id = 2} 
+  **Example:** https://ws-most-watched-movies.herokuapp.com/getMostWatched 	{Body: id = 2}  
   **API respond:**  
   ```json  
   {
@@ -58,13 +58,13 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
   }
   ```
 * #### Get most watched movies/tv-shows with number of views defined by limits
-  **Relative Path:** /getMostViewedByLimit  
+  **Relative Path:** /getMostWatchedByLimit  
   **Verb:** GET  
-  **API call:** ws-favorite-movies.herokuapp.com/getMostWatchedByLimit/?min={min}&max={max}  
+  **API call:** ws-most-watched-movies.herokuapp.com/getMostWatchedByLimit/?min={min}&max={max}  
   **Parameters:**  
     &nbsp; &nbsp; &nbsp; min - the minimum number of views (include)  
     &nbsp; &nbsp; &nbsp; max - the maximum number of views (include)  
-  **Example:** https://ws-favorite-movies.herokuapp.com/getMostViewedByLimit/?min=26&max=100  
+  **Example:** https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLimit/?min=26&max=100  
   **API respond:**  
   ```json  
   [{
@@ -85,11 +85,11 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
   }]
   ```
 * #### Get most watched movies/tv-shows by their language
-  **Relative Path:** /getMostViewedByLanguage  
+  **Relative Path:** /getMostWatchedByLanguage  
   **Verb:** GET  
-  **API call:** ws-favorite-movies.herokuapp.com/getMostWatchedByLanguage/?lang={lang}  
+  **API call:** ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang={lang}  
   **Parameters:** lang - the langauge the movie/tv-show is filtered by  
-  **Example:** https://ws-favorite-movies.herokuapp.com/getMostViewedByLimit/?lang=English  
+  **Example:** https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang=English  
   **API respond:**  
   ```json  
   [{
@@ -116,4 +116,4 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
 For any questions and notes - you can always contact with Yoav Saroya (@SaroyaMan) - stankovic100@gmail.com
 * **category:** WS util library.
 * **last update:** 05/05/2017.
-* **author:** Yoav Saroya - 304835887.
+* **author:** Yoav Saroya - 304835887.  
