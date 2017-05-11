@@ -116,8 +116,8 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
 	In case you send wrong params (for example id that contains characters), you will get a json error which describes your error.
 	```json
 	{
-	"error": "Video(s) is not found",
-	"description": "description of the error..."
+	 "error": "Video(s) is not found",
+	 "description": "description of the error..."
 	}
 	```
 ### Authors and Contributors
