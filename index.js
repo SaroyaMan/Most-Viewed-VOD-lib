@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));   //For parsing POST requests
 app.use('/assets', express.static(`${__dirname}/public`));
 app.use(express.static(__dirname + '/public'));
 
+
 app.all('/', (req, res) => {
    res.sendFile(`assets/`);
 });

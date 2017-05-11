@@ -1,19 +1,12 @@
-const mostWatchedJson = require('./data/most_watched.json'),
+const mostWatchedJson    = require('./data/most_watched.json'),
+      config             = require('./config');
 
-      //Json error in case of bad use
-      jsonError = {
-        "error": "Video(s) is not found"
-      },
-      idNotExistsDesc    = "ID is not exists",
-      limitExceptionDesc = "No results for videos with this limit of views",
-      localExceptionDesc = "No results for videos with these subtitles and language";
-
-function error(description) {
-    jsonError['description'] = description;
-    return jsonError;
-}
-
-//MostWatchedDao is a static class that handles all the data.
+/**
+ * MostWatchedDao is a static class that handles all the data.
+ * Meaning: no need to create a new instance of it.
+ * Just use it like this: MostWatchedDao.getAllMostWatched()
+ * @type {MostWatchedDao}
+ */
 module.exports = class MostWatchedDao {
 
     /**
@@ -35,7 +28,7 @@ module.exports = class MostWatchedDao {
                 return movie;
             }
         }
-        return error(idNotExistsDesc);
+        return this.error(config.idNotExistsDesc);
     }
 
     /**
@@ -59,7 +52,7 @@ module.exports = class MostWatchedDao {
             if(mostWatchedMoviesFiltered.length > 0) return mostWatchedMoviesFiltered;
         }
         //else: Error...
-        return error(limitExceptionDesc);
+        return this.error(config.limitExceptionDesc);
     }
 
     /**
@@ -75,6 +68,17 @@ module.exports = class MostWatchedDao {
             }
         }
         if(mostWatchedMoviesFiltered.length > 0) return mostWatchedMoviesFiltered;
-        return error(localExceptionDesc);
+        return this.error(config.localExceptionDesc);
+    }
+
+    /**
+     * Return Error with a description
+     * @param description
+     * @return object
+     */
+    static error(description) {
+        console.log(`error: ${description}`);
+        config.jsonError['description'] = description;
+        return config.jsonError;
     }
 };

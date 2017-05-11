@@ -112,6 +112,14 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
 	"description": "The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker."
   }]
   ```  
+* #### Error handling:  
+	In case you send wrong params (for example id that contains characters), you will get a json error which describes your error.
+	```json
+	{
+	"error": "Video(s) is not found",
+	"description": "description of the error..."
+	}
+	```
 ### Authors and Contributors
 For any questions and notes - you can always contact with Yoav Saroya (@SaroyaMan) - stankovic100@gmail.com
 * **category:** WS util library.
