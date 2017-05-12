@@ -1,5 +1,28 @@
-const mostWatchedJson    = require('./data/most_watched.json'),
-      config             = require('./config');
+const mongoose = require('mongoose'),
+      Movie    = require('./data/MostWatchedMovie'),
+      consts   = require('./consts'),
+      config   = require('./config');
+
+
+//Mongoose connect + setup
+mongoose.connect(consts.MLAB_KEY);  //Connect to Mlab database
+mongoose.Promise = global.Promise;  //Bind between mongoose promises and defualt promises
+mongoose.connection.on(consts.ERROR, (err) => console.log(`Connection error: ${err}`));
+mongoose.connection.on(consts.OPEN,  ()    => console.log('Connected to Database '));
+
+
+/**
+ * Return Error with a description
+ * It's a PRIVATE method as a part of MostWachedDao
+ * @param description
+ * @return object
+ */
+function error(description) {
+    console.log(`error: ${description}`);
+    config.jsonError['description'] = description;
+    return config.jsonError;
+}
+
 
 /**
  * MostWatchedDao is a static class that handles all the data.
@@ -11,74 +34,44 @@ module.exports = class MostWatchedDao {
 
     /**
      * Get all most watched movies
-     * @return array
+     * @return Promise
      */
     static getAllMostWatched() {
-        return mostWatchedJson;
+        return Movie.find()
+                    .catch((err) => err);
     }
 
     /**
      * Get most watched movie by ID
      * @param id
-     * @return object
+     * @return Promise
      */
-    static getMostWatched(id) {
-        for(let movie of mostWatchedJson) {
-            if(+movie.id === id) {
-                return movie;
-            }
-        }
-        return this.error(config.idNotExistsDesc);
+    static getMostWatchedById(id) {
+        return Movie.findOne({id: id})
+                    .catch(() => error(config.idNotExistsDesc));
     }
 
     /**
      * Get most watched movies with number of views defined by limits
      * @param min
      * @param max
-     * @return array
+     * @return Promise
      */
     static getMostWatchedByLimit(min, max) {
-        let mostWatchedMoviesFiltered = [], isError;
         if (isNaN(min)) min = 0;
         if (isNaN(max)) max = Number.MAX_SAFE_INTEGER;
-        if (min === 0 && max === Number.MAX_SAFE_INTEGER) isError = true;
+        return Movie.find({views: {$gt: min - 1, $lt: max + 1}})
+                    .catch( () => error(config.limitExceptionDesc));
 
-        if(!isError) {
-            for(let movie of mostWatchedJson) {
-                if(+movie.views >= min && +movie.views <= max) {
-                    mostWatchedMoviesFiltered.push(movie);
-                }
-            }
-            if(mostWatchedMoviesFiltered.length > 0) return mostWatchedMoviesFiltered;
-        }
-        //else: Error...
-        return this.error(config.limitExceptionDesc);
     }
 
     /**
      * Get most watched movies by language
      * @param language
-     * @return array
+     * @return Promise
      */
     static getMostWatchedByLanguage(language) {
-        let mostWatchedMoviesFiltered = [];
-        for(let movie of mostWatchedJson) {
-            if(movie.localization.language  === language) {
-                mostWatchedMoviesFiltered.push(movie);
-            }
-        }
-        if(mostWatchedMoviesFiltered.length > 0) return mostWatchedMoviesFiltered;
-        return this.error(config.localExceptionDesc);
-    }
-
-    /**
-     * Return Error with a description
-     * @param description
-     * @return object
-     */
-    static error(description) {
-        console.log(`error: ${description}`);
-        config.jsonError['description'] = description;
-        return config.jsonError;
+        return Movie.find({'localization.language': language})
+                    .catch(() => error(config.localExceptionDesc));
     }
 };

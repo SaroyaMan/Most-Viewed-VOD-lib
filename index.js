@@ -1,42 +1,46 @@
 const express        = require('express'),
       bodyParser     = require('body-parser'),
-      MostWatchedDao = require('./most_watched/MostWatchedDao'), 
+      MostWatchedDao = require('./most_watched/MostWatchedDao'),
 
       app            = express(),
       port           = process.env.PORT || 3000;
 
-
+//basic setup
 app.use(bodyParser.urlencoded({extended: true}));   //For parsing POST requests
 app.use('/assets', express.static(`${__dirname}/public`));
 app.use(express.static(__dirname + '/public'));
 
 
-app.all('/', (req, res) => {
-   res.sendFile(`assets/`);
-});
+//Define routes and behaviour of the WS
+//===========================================================
+app.all('/', (req, res) => res.sendFile(`assets/`));
 
 app.get('/getAllMostWatched', (req, res) => {
     console.log('GET request: /getAllMostWatched');
-    res.json(MostWatchedDao.getAllMostWatched());
+    MostWatchedDao.getAllMostWatched()
+                  .then(  docs => res.json(docs))
 });
 
-app.post('/getMostWatched', (req, res) => {
-    console.log('POST request: /getMostWatched');
-    res.json(MostWatchedDao.getMostWatched(+req.body.id));
+app.post('/getMostWatchedById', (req, res) => {
+    console.log('POST request: /getMostWatchedById');
+    MostWatchedDao.getMostWatchedById(+req.body.id)
+                  .then( doc => res.json(doc));
 });
 
 app.get('/getMostWatchedByLimit', (req, res) => {
     console.log('GET request: /getMostWatchedByLimit');
-    res.json(MostWatchedDao.getMostWatchedByLimit(+req.query.min, +req.query.max));
+    MostWatchedDao.getMostWatchedByLimit(+req.query.min, +req.query.max)
+                  .then( docs => res.json(docs));
 });
 
 app.get('/getMostWatchedByLanguage', (req, res) => {
     console.log('GET request: /getMostWatchedByLanguage');
-    res.json(MostWatchedDao.getMostWatchedByLanguage(req.query.lang));
+    MostWatchedDao.getMostWatchedByLanguage(req.query.lang)
+                  .then( docs => res.json(docs));
 });
 
-app.all('*', (req, res) => {
-    res.redirect('/assets/error.html');
-});
+app.all('*', (req, res) => res.redirect('/assets/error.html'));
+//===========================================================
+
 
 app.listen(port, () => console.log(`Server is listening on ${port}`));
