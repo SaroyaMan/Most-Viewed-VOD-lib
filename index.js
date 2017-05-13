@@ -29,7 +29,9 @@ app.post('/getMostWatchedById', (req, res) => {
 
 app.get('/getMostWatchedByLimit', (req, res) => {
     console.log('GET request: /getMostWatchedByLimit');
-    MostWatchedDao.getMostWatchedByLimit(+req.query.min, +req.query.max)
+    let min = req.query.min === undefined ? 0 : +req.query.min,
+        max = req.query.max === undefined ? Number.MAX_SAFE_INTEGER : +req.query.max;
+    MostWatchedDao.getMostWatchedByLimit(min, max)
                   .then( docs => res.json(docs));
 });
 

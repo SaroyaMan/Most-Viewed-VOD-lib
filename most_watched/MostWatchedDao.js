@@ -7,8 +7,8 @@ const mongoose = require('mongoose'),
 //Mongoose connect + setup
 mongoose.connect(consts.MLAB_KEY);  //Connect to Mlab database
 mongoose.Promise = global.Promise;  //Bind between mongoose promises and defualt promises
-mongoose.connection.on(consts.ERROR, (err) => console.log(`Connection error: ${err}`));
-mongoose.connection.on(consts.OPEN,  ()    => console.log('Connected to Database '));
+mongoose.connection.on(config.ERROR, (err) => console.log(`Connection error: ${err}`));
+mongoose.connection.on(config.OPEN,  ()    => console.log('Connected to Database '));
 
 
 /**
@@ -58,8 +58,6 @@ module.exports = class MostWatchedDao {
      * @return Promise
      */
     static getMostWatchedByLimit(min, max) {
-        if (isNaN(min)) min = 0;
-        if (isNaN(max)) max = Number.MAX_SAFE_INTEGER;
         return Movie.find({views: {$gt: min - 1, $lt: max + 1}})
                     .catch( () => error(config.limitExceptionDesc));
 
