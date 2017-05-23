@@ -89,7 +89,7 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
   **Verb:** GET  
   **API call:** ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang={lang}  
   **Parameters:** lang - the langauge the movie/tv-show is filtered by  
-  **Example:** https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang=English  
+  **Example:** <a href="https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang=English">https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang=English</a>   
   **API respond:**  
   ```json  
   [{
