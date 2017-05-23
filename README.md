@@ -12,7 +12,7 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
 * #### Get all most watched movies/tv-shows from the V.O.D library
   **Relative Path:** /getAllMostWatched  
   **Verb:** GET  
-  **API call:** [ws-most-watched-movies.herokuapp.com/getAllMostWatched](ws-most-watched-movies.herokuapp.com/getAllMostWatched){:target="_blank"}  
+  **API call:** [https://ws-most-watched-movies.herokuapp.com/getAllMostWatched](https://ws-most-watched-movies.herokuapp.com/getAllMostWatched){:target="_blank"}  
   **API respond:**  
   ```json  
   [{
