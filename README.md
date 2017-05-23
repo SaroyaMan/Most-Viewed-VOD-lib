@@ -12,7 +12,7 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
 * #### Get all most watched movies/tv-shows from the V.O.D library
   **Relative Path:** /getAllMostWatched  
   **Verb:** GET  
-  **API call:** <a href="ws-most-watched-movies.herokuapp.com/getAllMostWatched" target=_blank>ws-most-watched-movies.herokuapp.com/getAllMostWatched</a>  
+  **API call:** [ws-most-watched-movies.herokuapp.com/getAllMostWatched](ws-most-watched-movies.herokuapp.com/getAllMostWatched){:target="_blank"}  
   **API respond:**  
   ```json  
   [{
@@ -47,7 +47,7 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
   **Verb:** POST  
   **API call:** ws-most-watched-movies.herokuapp.com/getMostWatchedById    
   **Parameters:** id - identifier for a specific most viewed video  
-  **Example:** <a href="https://ws-most-watched-movies.herokuapp.com/getMostWatchedById" target=_blank>https://ws-most-watched-movies.herokuapp.com/getMostWatchedById</a> {Body: id = 2}  
+  **Example:** [https://ws-most-watched-movies.herokuapp.com/getMostWatchedById](https://ws-most-watched-movies.herokuapp.com/getMostWatchedById){:target="_blank"} {Body: id = 2}  
   **API respond:**  
   ```json  
   {
@@ -64,7 +64,7 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
   **Parameters:**  
     &nbsp; &nbsp; &nbsp; min - the minimum number of views (include)  
     &nbsp; &nbsp; &nbsp; max - the maximum number of views (include)  
-  **Example:** <a href="https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLimit/?min=26&max=100" target=_blank>https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLimit/?min=26&max=100</a>   
+  **Example:** [https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLimit/?min=26&max=100  ](https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLimit/?min=26&max=100){:target="_blank"}  
   **API respond:**  
   ```json  
   [{
