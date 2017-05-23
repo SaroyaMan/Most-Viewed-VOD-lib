@@ -12,7 +12,7 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
 * #### Get all most watched movies/tv-shows from the V.O.D library
   **Relative Path:** /getAllMostWatched  
   **Verb:** GET  
-  **API call:** ws-most-watched-movies.herokuapp.com/getAllMostWatched  
+  **API call:** <a href="ws-most-watched-movies.herokuapp.com/getAllMostWatched" target=_blank>ws-most-watched-movies.herokuapp.com/getAllMostWatched</a>  
   **API respond:**  
   ```json  
   [{
@@ -47,7 +47,7 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
   **Verb:** POST  
   **API call:** ws-most-watched-movies.herokuapp.com/getMostWatchedById    
   **Parameters:** id - identifier for a specific most viewed video  
-  **Example:** https://ws-most-watched-movies.herokuapp.com/getMostWatchedById {Body: id = 2}  
+  **Example:** <a href="https://ws-most-watched-movies.herokuapp.com/getMostWatchedById" target=_blank>https://ws-most-watched-movies.herokuapp.com/getMostWatchedById</a> {Body: id = 2}  
   **API respond:**  
   ```json  
   {
@@ -64,7 +64,7 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
   **Parameters:**  
     &nbsp; &nbsp; &nbsp; min - the minimum number of views (include)  
     &nbsp; &nbsp; &nbsp; max - the maximum number of views (include)  
-  **Example:** https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLimit/?min=26&max=100  
+  **Example:** <a href="https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLimit/?min=26&max=100" target=_blank>https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLimit/?min=26&max=100</a>   
   **API respond:**  
   ```json  
   [{
@@ -89,7 +89,7 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
   **Verb:** GET  
   **API call:** ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang={lang}  
   **Parameters:** lang - the langauge the movie/tv-show is filtered by  
-  **Example:** <a href="https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang=English">https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang=English</a>   
+  **Example:** <a href="https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang=English" target=_blank>https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang=English</a>   
   **API respond:**  
   ```json  
   [{
@@ -112,8 +112,8 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
 	"description": "The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker."
   }]
   ```  
-* #### Error handling:  
-	In case you send wrong params (for example id that contains characters), you will get a json error which describes your error.
+  ### Error handling:
+	In case you send wrong params (i.e id that contains characters), you will get a json error which describes your error.
 	```json
 	{
 	 "error": "Video(s) is not found",
