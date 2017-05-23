@@ -89,7 +89,7 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
   **Verb:** GET  
   **API call:** ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang={lang}  
   **Parameters:** lang - the langauge the movie/tv-show is filtered by  
-  **Example:** <a href="https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang=English" target=_blank>https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang=English</a>   
+  **Example:** [https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang=English](https://ws-most-watched-movies.herokuapp.com/getMostWatchedByLanguage/?lang=English){:target="_blank"}  
   **API respond:**  
   ```json  
   [{
@@ -111,13 +111,14 @@ This is a web-service that manages most watched movies as a part of V.O.D librar
 	},
 	"description": "The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker."
   }]
-  ```  
+  ```
+  
 ### Error handling
  In case you send wrong params (i.e id that contains characters), you will get a json error which describes your error.
  ```json
 	{
-	 "error": "Video(s) is not found",
-	 "description": "description of the error..."
+	  "error": "Video(s) is not found",
+	  "description": "description of the error..."
 	}
  ```
 ### Authors and Contributors
